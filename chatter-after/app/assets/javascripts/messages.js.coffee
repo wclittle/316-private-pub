@@ -2,4 +2,6 @@
 # All this logic will automatically be available in application.js.
 # You can use CoffeeScript in this file: http://jashkenas.github.com/coffee-script/
 PrivatePub.subscribe "/messages/new", (data, channel) ->
-  alert data.message.content
+  #alert data.message.content
+  if data.refresh == 'true'
+    document.location.reload(true)
